@@ -10,13 +10,13 @@ pipeline {
 
         stage('Install') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh 'npm start'
+                bat 'npm start'
             }
         }
     }
